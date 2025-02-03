@@ -94,7 +94,7 @@ if run:
 
 
     for t in range(1, question_number+1): #問題数分繰り返す
-        st.text(f"問題{t}")
+        st.write(f"問題{t}")
 
         #計算の種類をリスト化
         Calculation_list = [k for k,v in Calculation_types.items() if v == True]
@@ -102,8 +102,8 @@ if run:
         #問題作成関数呼び出し(計算の種類、項の数、桁数)
         Equation, result = create_question(Calculation_list, term, digit)
         print(Equation)
-        st.text(Equation)
-        st.text(result)
+        st.write(f"## {Equation}")
+        st.write(f"# {result}")
         
         
 
